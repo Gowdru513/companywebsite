@@ -1,0 +1,32 @@
+.btn {
+  @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-500 hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/30;
+}
+
+.btn-secondary {
+  @apply border-gray-700 text-gray-300 bg-gray-800 hover:bg-gray-700 hover:scale-105 hover:shadow-lg;
+}
+
+.hover-lift {
+  @apply transition-all duration-300;
+}
+
+.hover-lift:hover {
+  @apply transform -translate-y-1 scale-102;
+}
+
+.animated-border {
+  @apply relative overflow-hidden;
+}
+
+.animated-border::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-600 to-indigo-400 scale-x-0 origin-right transition-transform duration-300;
+}
+
+.animated-border:hover::after {
+  @apply scale-x-100 origin-left;
+}
